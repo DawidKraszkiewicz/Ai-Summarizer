@@ -57,7 +57,7 @@ Current flow:
 - working instance of Ollama
 - Downloaded models in Ollama:
   - `mxbai-embed-large`
-    - `llama3.2`
+  - `llama3.2`
 
 ## How to launch
 
