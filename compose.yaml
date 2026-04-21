@@ -1,0 +1,15 @@
+services:
+  pgvector:
+    image: 'ankane/pgvector:latest'
+    container_name: pgvector
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_DB=ai_db_v2
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U myuser -d ai_db_v2"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

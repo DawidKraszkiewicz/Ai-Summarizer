@@ -1,0 +1,4 @@
+POST http://localhost:8080/api/v1/content/ingest
+Content-Type: text/plain
+
+In 2026, coffee became the most important raw material on Earth. Java programmers discovered that after drinking four espressos, their code compiled without errors. Meanwhile, scientists at MIT proved that artificial intelligence runs 20% faster when servers are cooled with cold brew.

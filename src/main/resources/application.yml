@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ai_db_v2
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        initialize-schema: true
+
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        model: mxbai-embed-large
+      chat:
+        options:
+          model: llama3.2
+          temperature: 0.0
+
+logging:
+  level:
+    org.springframework.ai: DEBUG
+    org.springframework.jdbc: DEBUG
